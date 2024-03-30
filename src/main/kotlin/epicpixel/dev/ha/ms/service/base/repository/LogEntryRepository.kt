@@ -5,4 +5,6 @@ import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface LogEntryRepository : MongoRepository<LogEntry, String>
+interface LogEntryRepository : MongoRepository<LogEntry, String> {
+    fun findByDetails(details: String): LogEntry?
+}

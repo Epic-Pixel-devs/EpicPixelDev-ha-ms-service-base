@@ -7,7 +7,8 @@ import java.time.LocalDateTime
 
 @Document("users")
 data class UserDocument(
-        @Id val id: ObjectId = ObjectId(),
+        @Id
+        val id: ObjectId = ObjectId(),
         val email: String,
         val password: String,
         val name: String,
