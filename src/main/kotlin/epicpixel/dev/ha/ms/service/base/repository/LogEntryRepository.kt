@@ -7,4 +7,3 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface LogEntryRepository : MongoRepository<LogEntry, ObjectId>
-

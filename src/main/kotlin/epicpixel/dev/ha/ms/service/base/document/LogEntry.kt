@@ -12,8 +12,8 @@ data class LogEntry(
     @Id val id: ObjectId = ObjectId(),
     @DBRef val user: UserDocument? = null,
     val createdAt: Instant = Instant.now(),
-    @Field("type") val level: LogLevel = LogLevel.INFO,
-    val details: String,
+    @Field("type") val level: LogLevel? = LogLevel.INFO,
+    var details: String,
 )
 
 enum class LogLevel {
@@ -21,4 +21,5 @@ enum class LogLevel {
     WARNING,
     ERROR,
     DEBUG,
+    SUCCESS,
 }
