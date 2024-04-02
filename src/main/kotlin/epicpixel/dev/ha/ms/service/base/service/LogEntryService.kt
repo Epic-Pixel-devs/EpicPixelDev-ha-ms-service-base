@@ -40,11 +40,15 @@ class LogEntryService(
 
     }
 
-    fun getLogByaID(id: ObjectId): LogEntry? {
+
+
+    fun getLogByID(id: String): LogEntry? {
         return logEntryRepository.findById(id).getOrNull()
     }
 
     fun getAllLogs(): List<LogEntry> {
         return logEntryRepository.findAll()
     }
+
+
 }

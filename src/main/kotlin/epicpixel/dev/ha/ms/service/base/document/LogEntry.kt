@@ -9,13 +9,12 @@ import java.time.Instant
 
 @Document("logs")
 data class LogEntry(
-    @Id val id: ObjectId = ObjectId(),
+    @Id val id: String? = null,
     @DBRef val user: UserDocument? = null,
     val createdAt: Instant = Instant.now(),
     @Field("type") val level: LogLevel? = LogLevel.INFO,
     var details: String,
 )
-
 enum class LogLevel {
     INFO,
     WARNING,
