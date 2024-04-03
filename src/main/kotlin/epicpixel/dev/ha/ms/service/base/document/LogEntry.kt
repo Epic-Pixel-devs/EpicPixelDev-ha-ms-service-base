@@ -12,7 +12,7 @@ data class LogEntry(
     @Id val id: String? = null,
     @DBRef val user: UserDocument? = null,
     val createdAt: Instant = Instant.now(),
-    @Field("type") val level: LogLevel? = LogLevel.INFO,
+    @Field("type") val level: LogLevel = LogLevel.INFO,
     var details: String,
 )
 enum class LogLevel {
